@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Accordion Sheet Music</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #1a472a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Snowflake decorative elements */
+        body::before {
+            content: '❄';
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 2em;
+            color: rgba(255, 255, 255, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        body::after {
+            content: '❄';
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2em;
+            color: rgba(255, 255, 255, 0.3);
+            animation: float 3s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #c41e3a 0%, #165b33 33%, #c41e3a 66%, #165b33 100%);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 20px;
+        }
+
+        h1 {
+            color: #c41e3a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #165b33;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .music-link {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2d5a3d;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .music-link::before {
+            content: '🎵';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            transition: left 0.3s ease;
+            opacity: 0;
+        }
+
+        .music-link:hover {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01729 100%);
+            color: white;
+            border-color: #c41e3a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+            padding-left: 45px;
+        }
+
+        .music-link:hover::before {
+            left: 15px;
+            opacity: 1;
+        }
+
+        .music-link:active {
+            transform: translateY(0);
+        }
+
+        /* Special styling for non-music files */
+        .music-link.special {
+            background: linear-gradient(135deg, #fff8dc 0%, #ffeaa7 100%);
+            border-color: #fdcb6e;
+        }
+
+        .music-link.special:hover {
+            background: linear-gradient(135deg, #fdcb6e 0%, #f39c12 100%);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .music-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .music-link {
+                padding: 12px 15px;
+                font-size: 0.95em;
+            }
+
+            body::before,
+            body::after {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎄 Christmas Accordion Music 🎄</h1>
+            <p class="subtitle">Sheet Music Collection</p>
+        </header>
+
+        <div class="music-grid">
+            <a href='amazing_grace_1.jpg' class='music-link'>Amazing Grace 1</a>
+            <a href='amazing_grace_2.jpg' class='music-link'>Amazing Grace 2</a>
+            <a href='angels_we_have_heard_on_high_1.jpg' class='music-link'>Angels We Have Heard On High 1</a>
+            <a href='angels_we_have_heard_on_high-2.jpg' class='music-link'>Angels We Have Heard On High 2</a>
+            <a href='angels_we_have_heard_on_high-3.jpg' class='music-link'>Angels We Have Heard On High 3</a>
+            <a href='ave_maria_1.jpg' class='music-link'>Ave Maria 1</a>
+            <a href='ave_maria_2.jpg' class='music-link'>Ave Maria 2</a>
+            <a href='away_in_a_manger.jpg' class='music-link'>Away In A Manger</a>
+            <a href='bells_of_st_marys_1.jpg' class='music-link'>Bells Of St Marys 1</a>
+            <a href='bells_of_st_marys_2.jpg' class='music-link'>Bells Of St Marys 2</a>
+            <a href='blue_Christmas.jpg' class='music-link'>Blue Christmas</a>
+            <a href='button-guide-chart.jpg' class='music-link special'>Button Guide Chart</a>
+            <a href='christmas 042.JPG' class='music-link special'>Christmas Photo 042</a>
+            <a href='christmas 043.JPG' class='music-link special'>Christmas Photo 043</a>
+            <a href='christmas 044.JPG' class='music-link special'>Christmas Photo 044</a>
+            <a href='christmas 046.JPG' class='music-link special'>Christmas Photo 046</a>
+            <a href='christmas 066.JPG' class='music-link special'>Christmas Photo 066</a>
+            <a href='deck_the_hall_1.jpg' class='music-link'>Deck The Hall 1</a>
+            <a href='deck_the_hall_2.jpg' class='music-link'>Deck The Hall 2</a>
+            <a href='deck_the_hall_3.jpg' class='music-link'>Deck The Hall 3</a>
+            <a href='deck_the_hall_ver2.jpg' class='music-link'>Deck The Hall Ver2</a>
+            <a href='don_poster-2.jpg' class='music-link special'>Don Poster 2</a>
+            <a href='don_poster.jpg' class='music-link special'>Don Poster</a>
+            <a href='edelweiss.jpg' class='music-link'>Edelweiss</a>
+            <a href='feliz_navidad_1.jpg' class='music-link'>Feliz Navidad 1</a>
+            <a href='feliz_navidad_2.jpg' class='music-link'>Feliz Navidad 2</a>
+            <a href='frosty_the_snow_man.jpg' class='music-link'>Frosty The Snow Man</a>
+            <a href='God_rest_ye_merry_gentlemen_1.jpg' class='music-link'>God Rest Ye Merry Gentlemen 1</a>
+            <a href='God_rest_ye_merry_gentlemen_2.jpg' class='music-link'>God Rest Ye Merry Gentlemen 2</a>
+            <a href='go_tell_it_on_the_mountain.jpg' class='music-link'>Go Tell It On The Mountain</a>
+            <a href='go_tell_it_on_the_mountain_ver2.jpg' class='music-link'>Go Tell It On The Mountain Ver2</a>
+            <a href='hark_the_herald_angels.jpg' class='music-link'>Hark The Herald Angels</a>
+            <a href='here_comes_santa_claus_1.jpg' class='music-link'>Here Comes Santa Claus 1</a>
+            <a href='here_comes_santa_claus_2.jpg' class='music-link'>Here Comes Santa Claus 2</a>
+            <a href='here_comes_santa_claus_3.jpg' class='music-link'>Here Comes Santa Claus 3</a>
+            <a href='here_comes_santa_claus_ver1_1.jpg' class='music-link'>Here Comes Santa Claus Ver1 1</a>
+            <a href='here_comes_santa_claus_ver2_2.jpg' class='music-link'>Here Comes Santa Claus Ver2 2</a>
+            <a href='here_comes_santa_claus_ver2_3.jpg' class='music-link'>Here Comes Santa Claus Ver2 3</a>
+            <a href='holly_jolly_Christmas_2.jpg' class='music-link'>Holly Jolly Christmas 2</a>
+            <a href='holly_jolly-Christmas.jpg' class='music-link'>Holly Jolly Christmas</a>
+            <a href='holly_jolly_Christmas.jpg' class='music-link'>Holly Jolly Christmas</a>
+            <a href='how_great_thou_art.jpg' class='music-link'>How Great Thou Art</a>
+            <a href='ill_be_home_for_Christmas.jpg' class='music-link'>I'll Be Home For Christmas</a>
+            <a href='Jesus_loves_me.jpg' class='music-link'>Jesus Loves Me</a>
+            <a href='jingle_bells.jpg' class='music-link'>Jingle Bells</a>
+            <a href='joy_to_the_world.jpg' class='music-link'>Joy To The World</a>
+            <a href='let_it_snow.jpg' class='music-link'>Let It Snow</a>
+            <a href='o_Christmas_tree.jpg' class='music-link'>O Christmas Tree</a>
+            <a href='o_Christmas_tree_v2.jpg' class='music-link'>O Christmas Tree V2</a>
+            <a href='o_Christmas_tree_v3.jpg' class='music-link'>O Christmas Tree V3</a>
+            <a href='o_come_all_ye_faithful.jpg' class='music-link'>O Come All Ye Faithful</a>
+            <a href='o_holy_night_1.jpg' class='music-link'>O Holy Night 1</a>
+            <a href='o_holy_night_2.jpg' class='music-link'>O Holy Night 2</a>
+            <a href='o_little_town_1.jpg' class='music-link'>O Little Town 1</a>
+            <a href='o_little_town_2.jpg' class='music-link'>O Little Town 2</a>
+            <a href='o_little_town_3.jpg' class='music-link'>O Little Town 3</a>
+            <a href='o_little_town_of_bethlehem.jpg' class='music-link'>O Little Town Of Bethlehem</a>
+            <a href='rudolph_the_red_nosed_reindeer.jpg' class='music-link'>Rudolph The Red Nosed Reindeer</a>
+            <a href='silent_night.jpg' class='music-link'>Silent Night</a>
+            <a href='silver_bells.jpg' class='music-link'>Silver Bells</a>
+            <a href='the_first_noel.jpg' class='music-link'>The First Noel</a>
+            <a href='the_twelve_days_of_Christmas.jpg' class='music-link'>The Twelve Days Of Christmas</a>
+            <a href='toc.jpg' class='music-link special'>Table of Contents</a>
+            <a href='up_on_the_housetop_1.jpg' class='music-link'>Up On The Housetop 1</a>
+            <a href='up_on_the_housetop-2.jpg' class='music-link'>Up On The Housetop 2</a>
+            <a href='up_on_the_housetop_3.jpg' class='music-link'>Up On The Housetop 3</a>
+            <a href='we_three_kings_1.jpg' class='music-link'>We Three Kings 1</a>
+            <a href='we_three_kings_2.jpg' class='music-link'>We Three Kings 2</a>
+            <a href='we_wish_you_a_merry_Christmas.jpg' class='music-link'>We Wish You A Merry Christmas</a>
+            <a href='whispering_hope.jpg' class='music-link'>Whispering Hope</a>
+            <a href='white_Christmas_1.jpg' class='music-link'>White Christmas 1</a>
+            <a href='white_Christmas_2.jpg' class='music-link'>White Christmas 2</a>
+            <a href='white_Christmas.jpg' class='music-link'>White Christmas</a>
+            <a href='why_me_lord.jpg' class='music-link'>Why Me Lord</a>
+            <a href='wings_of_a_dove.jpg' class='music-link'>Wings Of A Dove</a>
+        </div>
+
+        <footer>
+            <p>🎵 Click any song to view the sheet music 🎵</p>
+        </footer>
+    </div>
+</body>
+</html>
